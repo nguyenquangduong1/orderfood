@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FoodDetail">
+<android.support.design.widget.AppBarLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    android:fitsSystemWindows="true"
+    android:id="@+id/app_bar_layout"
+    >
+
+
+    <android.support.design.widget.CollapsingToolbarLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:id="@+id/collapsing"
+        android:fitsSystemWindows="true"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        app:contentScrim="#0e0d0e"
+        app:expandedTitleTextAppearance="@android:color/transparent">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/img_food"
+            android:contentDescription="@null"
+            android:scaleType="centerCrop"
+            />
+
+    </android.support.design.widget.CollapsingToolbarLayout>
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        ></android.support.v7.widget.Toolbar>
+
+
+</android.support.design.widget.AppBarLayout>
+
+
+    <com.andremion.counterfab.CounterFab
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCart"
+        android:src="@drawable/ic_shopping_cart_black_24dp1"
+        android:backgroundTint="#fff"
+        app:elevation="6dp"
+        app:layout_anchor="@id/app_bar_layout"
+        app:layout_anchorGravity="bottom|right|end"
+        app:useCompatPadding="true"
+        app:pressedTranslationZ="12dp"/>
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRating"
+        android:src="@drawable/ic_star_black_24dp"
+        android:backgroundTint="@android:color/white"
+        app:elevation="6dp"
+        app:layout_anchor="@id/app_bar_layout"
+        app:layout_anchorGravity="bottom|right|start"
+        app:useCompatPadding="true"
+        app:pressedTranslationZ="12dp"/>
+
+
+    <android.support.v4.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:id="@+id/nestedScrollView"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
+
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/food_name"
+                    android:padding="12dp"
+                    android:text="Food Name"
+                    android:layout_marginTop="8dp"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/layout_price"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_attach_money_black_24dp"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/food_price"
+                        android:text="100.000"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" VNĐ"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        />
+
+
+
+
+
+                </LinearLayout>
+
+
+                <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/number_button"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:textSize="8dp"
+                    app:backGroundColor="#A59F81"
+                    app:initialNumber="1"
+                    app:finalNumber="20"></com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+
+
+
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <RatingBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ratingBar"
+                    android:rating="3"
+                    android:theme="@style/RatingBar"
+                    android:max="5"
+                    android:isIndicator="true"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/food_description"
+                    android:layout_marginTop="12dp"
+                    android:lineSpacingMultiplier="1.5"
+                    android:padding="12dp"
+                    android:text="Decription"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"/>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+        <info.hoang8f.widget.FButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
+            android:id="@+id/btnShowComment"
+            android:backgroundTint="#D5E7B967"
+            android:text="Xem thêm bình luận đánh giá ..."
+            android:layout_alignParentBottom="true"
+            android:layout_margin="8dp"
+            android:textColor="@color/cart"
+            app:shadowColor="@android:color/black"
+
+            app:buttonColor="@color/btnSignUpActive"
+            />
+
+
+    </LinearLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

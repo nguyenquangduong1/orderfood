@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/aaaa"
+    tools:context=".SignIn">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+                android:layout_width="match_parent"
+                android:id="@+id/edtPhone"
+                android:text="0338736498"
+                android:hint="Số điện thoại"
+                android:textColorHint="@android:color/black"
+                android:textColor="@android:color/black"
+                android:textSize="34sp"
+                app:met_baseColor="@android:color/black"
+                app:met_maxCharacters="11"
+                android:inputType="phone"
+                app:met_floatingLabel="highlight"
+                app:met_primaryColor="@android:color/black"
+                app:met_singleLineEllipsis="true"
+                android:layout_height="wrap_content" />
+
+
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:id="@+id/edtPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mật khẩu"
+            android:inputType="textPassword"
+            android:text="1234"
+            android:textColor="@android:color/black"
+            android:textColorHint="@android:color/black"
+            android:textSize="24dp"
+            app:met_baseColor="@android:color/background_dark"
+            app:met_floatingLabel="highlight"
+            app:met_maxCharacters="11"
+            app:met_primaryColor="@android:color/white"
+            app:met_singleLineEllipsis="true"  />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="2">
+
+            <com.rey.material.widget.CheckBox
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/Material.Drawable.CheckBox"
+                android:id="@+id/ckbRemenber"
+                android:text="Nhớ Tài Khoản"
+                android:textColor="@android:color/white"
+                app:cbd_strokeColor="@android:color/white"
+                app:cbd_tickColor="@color/colorPrimaryDark"
+                android:gravity="center_vertical"
+
+                />
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@android:color/white"
+                android:id="@+id/txtForgotPwd"
+                android:text="@string/forgot_pwd"/>
+
+        </LinearLayout>
+
+
+        <TextView
+
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:id="@+id/txtSignUp"
+            android:text="Nếu bạn chưa có Tài khoản?"
+            android:gravity="right"
+            android:layout_marginBottom="100dp"
+            android:textStyle="bold|italic"
+            android:textSize="20dp"
+            />
+
+
+
+        </LinearLayout>
+
+    <info.hoang8f.widget.FButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"
+        android:id="@+id/btnSignIn"
+        android:backgroundTint="#D5E7B967"
+        android:text="Đăng Nhập"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="8dp"
+        android:textColor="@color/cart"
+        app:shadowColor="@android:color/black"
+
+        app:buttonColor="@color/btnSignUpActive"
+        />
+
+</RelativeLayout>

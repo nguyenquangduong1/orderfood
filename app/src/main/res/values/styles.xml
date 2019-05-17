@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#123D2929</item>
+        <item name="colorPrimaryDark">#123D2929</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme1" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/viencart</item>
+        <item name="colorPrimaryDark">@color/viencart</item>
+        <item name="colorAccent">@color/viencart</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+    </style>
+
+    <style name="AppTheme.AppBarOverlay">
+        <item name="android:windowActionBarOverlay">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="CollapsedAppbar" parent="@android:style/TextAppearance.Medium">
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+
+    //rating dialog
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#83FFD600</item>
+        <item name="colorControlActivated">#FFD600</item>
+    </style>
+
+    <style name="quantity" parent="Theme.AppCompat">
+        <item name="colorControlNormal">#83FFD600</item>
+        <item name="colorControlActivated">#FFD600</item>
+    </style>
+
+
+
+
+</resources>

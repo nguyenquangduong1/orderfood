@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#BE6C6C</color>
+    <color name="colorPrimaryDark">#be8989</color>
+    <color name="colorAccent">#39796b</color>
+    <color name="btnSignUp">#39796b</color>
+    <color name="btnSignUpActive">#a9d96b</color>
+    <color name="btnSignActive">#a9d96b</color>
+
+    <color name="overlaybackground">#b49a27</color>
+    <color name="overlayActionBar">#2efccf</color>
+    <color name="cart">#F5F3F3</color>
+    <color name="viencart">#D9B69E</color>
+
+
+</resources>
